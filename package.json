@@ -1,0 +1,40 @@
+{
+  "name": "express-session-redis",
+  "version": "0.0.0",
+  "description": "Express/connect, Redis based session store backed by a single hash and zset collection.",
+  "main": "index.js",
+  "scripts": {
+    "test": "bin/grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mirek/node-express-session-redis.git"
+  },
+  "keywords": [
+    "connect",
+    "express",
+    "session",
+    "store",
+    "redis",
+    "hash",
+    "single",
+    "collection",
+    "alternative"
+  ],
+  "author": "Mirek Rusin http://github.com/mirek",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mirek/node-express-session-redis/issues"
+  },
+  "homepage": "https://github.com/mirek/node-express-session-redis",
+  "devDependencies": {
+    "coffee-script": "^1.7.1",
+    "grunt-contrib-coffee": "^0.10.1",
+    "grunt-cli": "^0.1.13",
+    "grunt-mocha-test": "^0.9.3",
+    "mocha": "^1.17.1",
+    "grunt": "^0.4.2",
+    "grunt-contrib-watch": "^0.5.3",
+    "express": "^3.4.8"
+  }
+}
