@@ -9,7 +9,7 @@ module.exports = (connect) ->
   # and `connect-redis` middleware code.
   class Store extends connect.session.Store
 
-    # options.ttl Time to live in 
+    # options.maxTtl Maximum time to live in seconds
     constructor: (options = {}) ->
       super
 
@@ -100,9 +100,13 @@ module.exports = (connect) ->
       multi.hdel @name, sid
       multi.exec f
 
-    # length: (f) ->
-    #   @client.hlen @name, f
+    length: (f) ->
+      @client.hlen @name, f
 
-    # clear: (f) ->
+    clear: (f) ->
+      multi = @client.multi()
+      multi.del @name
+      multi.del @expName
+      multi.exec f
 
   Store
